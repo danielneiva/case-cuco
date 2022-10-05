@@ -39,7 +39,7 @@ php artisan serve
 Em outra janela do terminal, deve-se ir até o diretório do repositório e executar:
 ```
 cd frontend &&
-cp .env.example .env && 
+cp .env.example .env
 ```
 
 ### 3.1 - Especificar o URL da API ###
