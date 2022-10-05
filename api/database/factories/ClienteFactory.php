@@ -18,9 +18,9 @@ class ClienteFactory extends Factory
     {
         return [
             'nome' => fake()->name(),
-            'cpf' => fake()->cpf(),
+            'cpf' => str_replace(['.','-'],'',fake()->cpf()),
             'nascimento' => fake()->date(),
-            'telefone' => fake()->phone(),
+            'telefone' => str_replace(['(',')','-', ' '],'',fake()->phoneNumber()),
         ];
     }
 }
