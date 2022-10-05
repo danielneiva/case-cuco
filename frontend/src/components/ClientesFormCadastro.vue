@@ -51,6 +51,7 @@
           val => !!val || 'Este campo é obrigatório',
           val => val.length == 11 || 'Informe um telefone válido'
         ]"
+        lazy-rules
         mask="(##)#####-####"
         fill-mask
         unmasked-value
