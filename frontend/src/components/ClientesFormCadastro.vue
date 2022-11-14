@@ -81,8 +81,11 @@ const form = ref({
 })
 
 const cadastrarCliente = () => {
+  reuso.showLoading()
   api.post('clientes', form.value)
   .then((response) => {
+    reuso.mensagemSucesso('Cliente cadastrado com sucesso')
+    reuso.hideLoading()
     emit('clienteCadastrado')
   })
 }

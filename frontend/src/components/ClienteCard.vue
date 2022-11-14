@@ -3,7 +3,7 @@
     class="q-pa-sm q-ma-xs full-width"
   >
     <q-btn
-      class="float-right"
+      class="float-right q-pa-xs"
       color="negative"
       icon="delete"
       round

@@ -8,7 +8,7 @@
           width="280px"
         />
       </div>
-      <div class="col col-xs-12 col-md-10 col-lg-4">
+      <div class="col col-xs-12 col-md-10 col-lg-8">
         <q-card>
           <q-tabs
             v-model="tab"
