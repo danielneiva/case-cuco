@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ClienteStoreRequest;
+use App\Http\Requests\ClienteUpdateRequest;
 use App\Models\Cliente;
 use Illuminate\Http\Request;
 
@@ -48,9 +49,10 @@ class ClienteController extends Controller
      * @param  \App\Models\Cliente  $cliente
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Cliente $cliente)
+    public function update(ClienteUpdateRequest $request, Cliente $cliente)
     {
-        //
+        $cliente->update($request->validated());
+        return $cliente;
     }
 
     /**
