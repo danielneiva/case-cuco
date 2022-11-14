@@ -16,7 +16,7 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        return Cliente::all();
+        return Cliente::paginate(10)->all();
     }
 
     /**
@@ -77,13 +77,14 @@ class ClienteController extends Controller
     {
         $nome = $request->input('nome', null);
         $cpf = $request->input('cpf', null);
+        $clientesPorPagina = $request['clientes_por_pagina'];
 
         $clientes = Cliente::when($nome, function($query, $nome) {
             $query->where('nome', 'like', '%' . $nome . '%');
         })
         ->when($cpf, function($query, $cpf) {
             $query->where('cpf', 'like', '%' . $cpf . '%');
-        })->get();
+        })->paginate($clientesPorPagina);
 
         return response($clientes);
     }
