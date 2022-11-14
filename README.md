@@ -40,6 +40,17 @@ php artisan db:seed
 php artisan serve
 ```
 
+### 2.5 - Rodar os testes
+```
+php artisan test
+```
+
+OBS: caso não seja possível conectar ao banco de dados, tente cachear as configurações:
+```
+php artisan config:cache
+```
+
+
 ### 3 - Configurar Frontend ###
 Em outra janela do terminal, deve-se ir até o diretório do repositório e executar:
 ```
