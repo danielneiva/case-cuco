@@ -88,5 +88,9 @@ const cadastrarCliente = () => {
     reuso.hideLoading()
     emit('clienteCadastrado')
   })
+  .catch((error) => {
+    reuso.mensagemErro('Houve um erro ao cadastrar o cliente', error)
+    reuso.hideLoading()
+  })
 }
 </script>
