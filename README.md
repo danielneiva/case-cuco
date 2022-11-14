@@ -1,6 +1,11 @@
 ### Case Cuco Health
 
-
+## Requerimentos para execução ##
+```
+PHP 8.1
+Composer 2
+Node 16+
+```
 
 ## Instruções para execução ##
 
