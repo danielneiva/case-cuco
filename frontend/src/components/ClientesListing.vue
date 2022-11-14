@@ -2,7 +2,7 @@
   <div class="q-pa-md row justify-center">
     <div class="col-12">
       <div class="row justify-center items-center">
-        <div class="col-sm-12 col-md-4 q-py-md q-px-xs">
+        <div class="col-xs-12 col-md-4 q-py-md q-px-xs">
           <q-input
             label="Nome"
             outlined
@@ -10,7 +10,7 @@
             v-model="filtro.nome"
           />
         </div>
-        <div class="col-sm-12 col-md-4 q-py-md q-px-xs">
+        <div class="col-xs-12 col-md-4 q-py-md q-px-xs">
           <q-input
             label="CPF"
             outlined
@@ -20,7 +20,7 @@
             v-model="filtro.cpf"
           />
         </div>
-        <div class="col-sm-12 col-md-4 q-py-md q-px-xs">
+        <div class="col-xs-12 col-md-4 q-py-md q-px-xs text-right">
           <q-btn
             color="positive"
             icon="search"
@@ -34,11 +34,11 @@
       <q-separator spaced size="2px" color="secondary"/>
     </div>
     <div 
-      class="col-sm-12 col-md-4 col-lg-3"
+      class="col-xs-12 col-md-4 col-lg-3"
       v-for="cliente in clientes"
       :key="cliente.id"
     >
-      <ClienteCard :cliente="cliente" @cliente-deletado="onClienteDeletado"/>
+      <ClienteCard :cliente="cliente" @cliente-deletado="onClienteDeletado"  class="full-width"/>
     </div>
   </div>
 </template>

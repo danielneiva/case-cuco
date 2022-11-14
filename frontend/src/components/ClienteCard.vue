@@ -1,6 +1,6 @@
 <template>
   <q-card
-    class="q-pa-sm q-ma-xs "
+    class="q-pa-sm q-ma-xs full-width"
   >
     <q-btn
       class="float-right"
