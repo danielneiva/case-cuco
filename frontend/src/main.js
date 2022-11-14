@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import { Quasar, Notify, Loading } from 'quasar'
+import { Quasar, Notify, Loading, Dialog } from 'quasar'
 import './css/style.css'
 import App from './App.vue'
 // Import icon libraries
@@ -13,7 +13,8 @@ const app = createApp(App)
 
 app.use(Quasar, {
   plugins: {
-    Notify
+    Notify, 
+    Dialog,
   },
   config: {
     notify: {}
