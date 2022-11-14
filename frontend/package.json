@@ -12,7 +12,7 @@
     "@quasar/extras": "^1.15.4",
     "axios": "^1.0.0",
     "dotenv": "^16.0.3",
-    "quasar": "^2.9.1",
+    "quasar": "^2.10.2",
     "vue": "^3.2.37"
   },
   "devDependencies": {
