@@ -1,5 +1,8 @@
-### Case Cuco Health
+### Exemplo de API + SPA
+Este repositório é um exemplo de implementação de API usando Laravel, e frontend usando VueJs + Quasar.
+O sistema conta com um CRUD básico de Clientes, com Nome, CPF, Nascimento e Telefone, além de um filtro para clientes, onde se pode buscá-los por nome e CPF.
 
+___
 ## Requerimentos para execução ##
 ```
 PHP 8.1
@@ -13,7 +16,7 @@ Node 16+
 ```
 git clone https://github.com/danielneiva/case-cuco.git
 ```
-
+___
 ### 2 - Configurar API ###
 ```
 cd case-cuco/api &&
@@ -40,28 +43,29 @@ php artisan db:seed
 php artisan serve
 ```
 
-### 2.5 - Rodar os testes
+### 3 - Rodar os testes
 ```
 php artisan test
 ```
 
-OBS: caso não seja possível conectar ao banco de dados, tente cachear as configurações:
+**Caso não seja possível conectar ao banco de dados, tente cachear as configurações:**
 ```
 php artisan config:cache
 ```
+***OBS.: O sistema reseta o banco sempre que os testes são rodados. Para repopular o banco, volte ao passo 2.3**
 
-
-### 3 - Configurar Frontend ###
+___
+### 4 - Configurar Frontend ###
 Em outra janela do terminal, deve-se ir até o diretório do repositório e executar:
 ```
 cd frontend &&
 cp .env.example .env
 ```
 
-### 3.1 - Especificar o URL da API ###
+### 4.1 - Especificar o URL da API ###
 É necessário especificar o URL da API. Após criado, é necessário alterar o arquivo .env, especificando o URL da API na variável VITE_API_URL
 
-### 3.2 - Instalar pacotes e executar ###
+### 4.2 - Instalar pacotes e executar ###
 ```
 npm install &&
 npm run dev
